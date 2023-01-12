@@ -132,6 +132,10 @@
       <excludeFolder url="file://$MODULE_DIR$/Sae_old/vendor/friendsofphp/proxy-manager-lts" />
       <excludeFolder url="file://$MODULE_DIR$/Sae_old/vendor/egulias/email-validator" />
       <excludeFolder url="file://$MODULE_DIR$/Sae_old/var" />
+      <excludeFolder url="file://$MODULE_DIR$/SaeA01/Framework/Symfony/vendor/symfony/maker-bundle/src/Resources/test" />
+      <excludeFolder url="file://$MODULE_DIR$/SaeA01/Framework/Symfony/vendor/symfony/string/Resources/bin" />
+      <excludeFolder url="file://$MODULE_DIR$/SaeA01/Framework/Symfony/var" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

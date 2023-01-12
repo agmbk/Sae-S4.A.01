@@ -24,66 +24,94 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Equipes`
+-- Structure de la table `equipes`
 --
 
-CREATE TABLE `Equipes` (
-  `libelle` varchar(64) NOT NULL,
-  `entraineur` varchar(128) NOT NULL,
-  `creneaux` varchar(128) NOT NULL,
-  `url_photo` varchar(512) NOT NULL,
-  `url_result_calendrier` varchar(512) NOT NULL,
-  `commentaire` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE `equipes`
+(
+    `libelle`               varchar(64)  NOT NULL,
+    `entraineur`            varchar(128) NOT NULL,
+    `creneaux`              varchar(128) NOT NULL,
+    `url_photo`             varchar(512) NOT NULL,
+    `url_result_calendrier` varchar(512) NOT NULL,
+    `commentaire`           text         NOT NULL
+) ENGINE = MyISAM
+  DEFAULT CHARSET = utf8;
 
 --
--- Déchargement des données de la table `Equipes`
+-- Déchargement des données de la table `equipes`
 --
 
-INSERT INTO `Equipes` (`libelle`, `entraineur`, `creneaux`, `url_photo`, `url_result_calendrier`, `commentaire`) VALUES
-('Loisirs', 'Ada Lovelace, Charles Babbage', 'Mercredi 20h-22h (ancien)', 'Loisirs.jpg', '', 'Les matches ont lieu en semaine et sont suivis d\'une troisième mi-temps conviviale.'),
-('Moins de 13', 'Alfred Aho, John Hopcroft, Jeffrey Ullman ', 'Lundi 17h-18h30 (nouveau), mercredi 16h30-18h (nouveau)', 'Moins13.jpg', 'https://www.ffhandball.fr/fr/competition/17692#poule-100556', 'DIVISION AURA M13 FEMININ, 2ème phase, poule 7, div 2'),
-('Moins de 9', 'Leslie Lamport, Donald Knuth', '', 'Moins9.jpg', '', ''),
-('Moins de 15', 'Brian Kernighan, Dennis Richie', 'Mercredi 18h30-20h (ancien), vendredi 17h-18h15 (alternance)', 'Moins15.jpg', 'https://www.ffhandball.fr/fr/competition/17691#poule-100531', '1ERE DIVISION AURA M15 FEMININ, 2ème phase, poule 7, div 1'),
-('Moins de 17', 'Ken Thomson', '', 'Moins17.jpg', 'https://www.ffhandball.fr/fr/competition/17709#poule-89919', 'Phase de Brassage - Entente avec ETOILE/BEAUVALLON'),
-('Moins de 18', 'Bram Moolenaar, Bill Joy', 'Mercredi 18h-20h00 (nouveau), Vendredi 18h15-19h30 (alternance)', 'Moins18.jpg', 'https://www.ffhandball.fr/fr/competition/17690#poule-100521', 'DIVISION AURA M18 ANS FEMININ, 2ème phase, poule 9, div 1'),
-('Seniors régionales (SF2)', 'Patrick Henry Winston, Terry Winograd', 'Mercredi 20h-22h (nouveau), vendredi 19h30-21h00 (alternance)', 'SF2.jpg', 'https://www.ffhandball.fr/fr/competition/17685#poule-94907', 'PREMIERE DIVISION AURA P16 FEMININE, poule 8'),
-('Seniors prénationales (SF1)', 'Patrick Henry Winston, Terry Winograd', 'Mercredi 20h-22h (nouveau), Vendredi 20h30-22h00 (alternance)', 'SF1.jpg', 'https://www.ffhandball.fr/fr/competition/17616#poule-90361', 'Équipe fanion, joue en prénational, poule 2'),
-('Moins de 11', 'Alain Colmerauer', 'Mardi 17h-18h30 (ancien)', 'Moins11.jpg', 'https://www.ffhandball.fr/fr/competition/18492#poule-96268', '1ère phase, découverte');
+INSERT INTO `equipes` (`libelle`, `entraineur`, `creneaux`, `url_photo`, `url_result_calendrier`, `commentaire`)
+VALUES ('Loisirs', 'Ada Lovelace, Charles Babbage', 'Mercredi 20h-22h (ancien)', 'Loisirs.jpg', '',
+        'Les matches ont lieu en semaine et sont suivis d\'une troisième mi-temps conviviale.'),
+       ('Moins de 13', 'Alfred Aho, John Hopcroft, Jeffrey Ullman ',
+        'Lundi 17h-18h30 (nouveau), mercredi 16h30-18h (nouveau)', 'Moins13.jpg',
+        'https://www.ffhandball.fr/fr/competition/17692#poule-100556',
+        'DIVISION AURA M13 FEMININ, 2ème phase, poule 7, div 2'),
+       ('Moins de 9', 'Leslie Lamport, Donald Knuth', '', 'Moins9.jpg', '', ''),
+       ('Moins de 15', 'Brian Kernighan, Dennis Richie', 'Mercredi 18h30-20h (ancien), vendredi 17h-18h15 (alternance)',
+        'Moins15.jpg', 'https://www.ffhandball.fr/fr/competition/17691#poule-100531',
+        '1ERE DIVISION AURA M15 FEMININ, 2ème phase, poule 7, div 1'),
+       ('Moins de 17', 'Ken Thomson', '', 'Moins17.jpg', 'https://www.ffhandball.fr/fr/competition/17709#poule-89919',
+        'Phase de Brassage - Entente avec ETOILE/BEAUVALLON'),
+       ('Moins de 18', 'Bram Moolenaar, Bill Joy', 'Mercredi 18h-20h00 (nouveau), Vendredi 18h15-19h30 (alternance)',
+        'Moins18.jpg', 'https://www.ffhandball.fr/fr/competition/17690#poule-100521',
+        'DIVISION AURA M18 ANS FEMININ, 2ème phase, poule 9, div 1'),
+       ('Seniors régionales (SF2)', 'Patrick Henry Winston, Terry Winograd',
+        'Mercredi 20h-22h (nouveau), vendredi 19h30-21h00 (alternance)', 'SF2.jpg',
+        'https://www.ffhandball.fr/fr/competition/17685#poule-94907', 'PREMIERE DIVISION AURA P16 FEMININE, poule 8'),
+       ('Seniors prénationales (SF1)', 'Patrick Henry Winston, Terry Winograd',
+        'Mercredi 20h-22h (nouveau), Vendredi 20h30-22h00 (alternance)', 'SF1.jpg',
+        'https://www.ffhandball.fr/fr/competition/17616#poule-90361', 'Équipe fanion, joue en prénational, poule 2'),
+       ('Moins de 11', 'Alain Colmerauer', 'Mardi 17h-18h30 (ancien)', 'Moins11.jpg',
+        'https://www.ffhandball.fr/fr/competition/18492#poule-96268', '1ère phase, découverte');
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Matches`
+-- Structure de la table `matches`
 --
 
-CREATE TABLE `Matches` (
-  `id_match` bigint(20) UNSIGNED NOT NULL,
-  `equipe_locale` varchar(64) NOT NULL,
-  `domicile_exterieur` tinyint(1) NOT NULL,
-  `equipe_adverse` varchar(64) NOT NULL,
-  `hote` varchar(64) DEFAULT NULL,
-  `date_heure` datetime DEFAULT NULL,
-  `num_semaine` int(11) NOT NULL,
-  `num_journee` int(11) NOT NULL,
-  `gymnase` varchar(64) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+CREATE TABLE `matches`
+(
+    `id_match`           bigint(20) UNSIGNED NOT NULL,
+    `equipe_locale`      varchar(64)         NOT NULL,
+    `domicile_exterieur` tinyint(1)          NOT NULL,
+    `equipe_adverse`     varchar(64)         NOT NULL,
+    `hote`               varchar(64) DEFAULT NULL,
+    `date_heure`         datetime    DEFAULT NULL,
+    `num_semaine`        int(11)             NOT NULL,
+    `num_journee`        int(11)             NOT NULL,
+    `gymnase`            varchar(64) DEFAULT NULL
+) ENGINE = MyISAM
+  DEFAULT CHARSET = utf8;
 
 --
--- Déchargement des données de la table `Matches`
+-- Déchargement des données de la table `matches`
 --
 
-INSERT INTO `Matches` (`id_match`, `equipe_locale`, `domicile_exterieur`, `equipe_adverse`, `hote`, `date_heure`, `num_semaine`, `num_journee`, `gymnase`) VALUES
-(1, 'Seniors prénationales (SF1)', 1, 'ATHLETIC HANDBALL ST VALLIER', 'GUILHERAND-GRANGES ARDECHE HANBBALL', '2022-09-25 14:00:00', 38, 1, 'CENTRE OMNISPORTS'),
-(2, 'Moins de 15', 1, 'BOURG DE PÉAGE DRÔME HAND BALL', 'GUILHERAND-GRANGES ARDECHE HANBBALL', '2022-10-02 11:00:00', 39, 1, 'CENTRE OMNISPORTS'),
-(3, 'Seniors régionales (SF2)', 1, 'ISARDROME 2', 'GUILHERAND-GRANGES ARDECHE HANBBALL', '2022-10-02 16:00:00', 39, 1, 'CENTRE OMNISPORTS'),
-(4, 'Seniors prénationales (SF1)', 0, 'HANDBALL ST MAURICE L\'EXIL', 'HANDBALL ST MAURICE L\'EXIL', '2022-10-01 21:00:00', 39, 2, 'SALLE OMNISPORTS'),
-(5, 'Moins de 18', 0, 'HBC SAINT DONAT', 'HBC ST DONAT', '2022-10-01 17:00:00', 39, 1, 'GYMNASE MUNICIPAL'),
-(6, 'Moins de 15', 0, 'ATHLÉTIC HANDBALL SAINT VALLIER', 'ATHLETIC HANDBALL ST VALLIER', '2022-10-08 16:30:00', 40, 2, 'MICHEL BETTON'),
-(7, 'Moins de 13', 1, 'ENTENTE ARDECHE MERIDIONALE HANDBALL', 'GUILHERAND-GRANGES ARDECHE HANBBALL', '2022-10-09 14:00:00', 40, 2, 'CENTRE OMNISPORTS'),
-(8, 'Moins de 18', 0, 'HANDBALL CLUB SAINT MARCELLOIS', 'HANDBALL CLUB SAINT MARCELLOIS', '2023-01-21 13:30:00', 3, 2, 'HALLE DES SPORTS'),
-(9, 'Seniors régionales (SF2)', 0, 'HB BOURG LES VALENCE', 'HB BOURG LES VALENCE', '2022-10-08 20:00:00', 40, 2, 'HALLE DU VALENTIN'),
-(10, 'Seniors prénationales (SF1)', 0, 'ENTENTE CALUIRE RILLIEUX LYON METROPOLE', 'AS LYON CALUIRE', '2022-10-16 16:00:00', 41, 4, 'GYMNASE CHARLES SENARD'),
+INSERT INTO `matches` (`id_match`, `equipe_locale`, `domicile_exterieur`, `equipe_adverse`, `hote`, `date_heure`,
+                       `num_semaine`, `num_journee`, `gymnase`)
+VALUES (1, 'Seniors prénationales (SF1)', 1, 'ATHLETIC HANDBALL ST VALLIER', 'GUILHERAND-GRANGES ARDECHE HANBBALL',
+        '2022-09-25 14:00:00', 38, 1, 'CENTRE OMNISPORTS'),
+       (2, 'Moins de 15', 1, 'BOURG DE PÉAGE DRÔME HAND BALL', 'GUILHERAND-GRANGES ARDECHE HANBBALL',
+        '2022-10-02 11:00:00', 39, 1, 'CENTRE OMNISPORTS'),
+       (3, 'Seniors régionales (SF2)', 1, 'ISARDROME 2', 'GUILHERAND-GRANGES ARDECHE HANBBALL', '2022-10-02 16:00:00',
+        39, 1, 'CENTRE OMNISPORTS'),
+       (4, 'Seniors prénationales (SF1)', 0, 'HANDBALL ST MAURICE L\'EXIL', 'HANDBALL ST MAURICE L\'EXIL',
+        '2022-10-01 21:00:00', 39, 2, 'SALLE OMNISPORTS'),
+       (5, 'Moins de 18', 0, 'HBC SAINT DONAT', 'HBC ST DONAT', '2022-10-01 17:00:00', 39, 1, 'GYMNASE MUNICIPAL'),
+       (6, 'Moins de 15', 0, 'ATHLÉTIC HANDBALL SAINT VALLIER', 'ATHLETIC HANDBALL ST VALLIER', '2022-10-08 16:30:00',
+        40, 2, 'MICHEL BETTON'),
+       (7, 'Moins de 13', 1, 'ENTENTE ARDECHE MERIDIONALE HANDBALL', 'GUILHERAND-GRANGES ARDECHE HANBBALL',
+        '2022-10-09 14:00:00', 40, 2, 'CENTRE OMNISPORTS'),
+       (8, 'Moins de 18', 0, 'HANDBALL CLUB SAINT MARCELLOIS', 'HANDBALL CLUB SAINT MARCELLOIS', '2023-01-21 13:30:00',
+        3, 2, 'HALLE DES SPORTS'),
+       (9, 'Seniors régionales (SF2)', 0, 'HB BOURG LES VALENCE', 'HB BOURG LES VALENCE', '2022-10-08 20:00:00', 40, 2,
+        'HALLE DU VALENTIN'),
+       (10, 'Seniors prénationales (SF1)', 0, 'ENTENTE CALUIRE RILLIEUX LYON METROPOLE', 'AS LYON CALUIRE',
+        '2022-10-16 16:00:00', 41, 4, 'GYMNASE CHARLES SENARD'),
 (11, 'Moins de 13', 0, 'ENTENTE BOURG DE PEAGE ST MARCEL', 'BOURG DE PEAGE DROME HANDBALL', '2022-10-15 13:15:00', 41, 3, 'COMPLEXE SPORTIF VERCORS / SALLE COMPETITION'),
 (12, 'Moins de 15', 0, 'HBC SAINT DONAT', 'BOURG DE PEAGE DROME HANDBALL', '2022-10-16 13:00:00', 41, 3, 'COMPLEXE SPORTIF VERCORS / SALLE COMPETITION'),
 (13, 'Moins de 18', 1, 'BOURG DE PÉAGE DRÔME HAND BALL', 'GUILHERAND-GRANGES ARDECHE HANBBALL', '2022-10-15 18:00:00', 41, 3, 'CENTRE OMNISPORTS'),
@@ -177,27 +205,28 @@ INSERT INTO `Matches` (`id_match`, `equipe_locale`, `domicile_exterieur`, `equip
 --
 
 --
--- Index pour la table `Equipes`
+-- Index pour la table `equipes`
 --
-ALTER TABLE `Equipes`
-  ADD PRIMARY KEY (`libelle`);
+ALTER TABLE `equipes`
+    ADD PRIMARY KEY (`libelle`);
 
 --
--- Index pour la table `Matches`
+-- Index pour la table `matches`
 --
-ALTER TABLE `Matches`
-  ADD PRIMARY KEY (`id_match`),
-  ADD UNIQUE KEY `equipe_locale` (`equipe_locale`,`equipe_adverse`,`num_semaine`) USING BTREE;
+ALTER TABLE `matches`
+    ADD PRIMARY KEY (`id_match`),
+    ADD UNIQUE KEY `equipe_locale` (`equipe_locale`, `equipe_adverse`, `num_semaine`) USING BTREE;
 
 --
 -- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT pour la table `Matches`
+-- AUTO_INCREMENT pour la table `matches`
 --
-ALTER TABLE `Matches`
-  MODIFY `id_match` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+ALTER TABLE `matches`
+    MODIFY `id_match` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 101;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
