@@ -1,0 +1,38 @@
+version: '3.3'
+
+services:
+  extends:
+    env_file:
+      - .env
+
+  # The mysql database
+  mysql:
+    image: mysql:5.7
+    restart: always
+
+    environment:
+      MYSQL_DATABASE: '${MYSQL_DATABASE}'
+      # So you don't have to use root, but you can if you like
+      MYSQL_USER: '${MYSQL_USER}'
+      # You can use whatever password you like
+      MYSQL_PASSWORD: '${MYSQL_PASSWORD}'
+      # Password for root access
+      MYSQL_ROOT_PASSWORD: '${MYSQL_ROOT_PASSWORD}'
+
+    ports:
+      # <Port exposed> : < MySQL Port running inside container>
+      - '${MYSQL_PORT}:3306'
+
+    expose:
+      # Opens port 3306 on the container
+      - '${MYSQL_PORT}'
+
+    # Where our data will be persisted
+    volumes:
+      - 'mysql-db:/var/lib/mysql'
+      # Execute the sql when creating the container
+      - './${MYSQL_DATABASE}.sql:/docker-entrypoint-initdb.d/${MYSQL_DATABASE}.sql'
+
+# Mysql volume
+volumes:
+  mysql-db:

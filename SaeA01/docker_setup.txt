@@ -1,0 +1,8 @@
+# Start, restart, stop
+docker-compose up # -d
+docker-compose restart
+docker-compose down
+
+# Fresh start
+docker system prune -a
+docker volume prune
