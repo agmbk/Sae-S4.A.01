@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\MatchesRepository;
+use DateTimeInterface;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -27,7 +28,7 @@ class Matches
     private ?string $hote = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE, nullable: true)]
-    private ?\DateTimeInterface $date_heure = null;
+    private ?DateTimeInterface $date_heure = null;
 
     #[ORM\Column]
     private int $num_semaine;
@@ -103,12 +104,12 @@ class Matches
         return $this;
     }
 
-    public function getDateHeure(): ?\DateTimeInterface
+    public function getDateHeure(): ?DateTimeInterface
     {
         return $this->date_heure;
     }
 
-    public function setDateHeure(?\DateTimeInterface $date_heure): self
+    public function setDateHeure(?DateTimeInterface $date_heure): self
     {
         $this->date_heure = $date_heure;
 

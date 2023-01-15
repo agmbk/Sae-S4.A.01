@@ -17,8 +17,7 @@ class EquipesType extends AbstractType
             ->add('creneaux')
             ->add('url_photo')
             ->add('url_result_calendrier')
-            ->add('commentaire')
-        ;
+            ->add('commentaire');
     }
 
     public function configureOptions(OptionsResolver $resolver): void

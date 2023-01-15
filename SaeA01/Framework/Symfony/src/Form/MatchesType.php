@@ -17,8 +17,7 @@ class MatchesType extends AbstractType
             ->add('date_heure')
             ->add('num_semaine')
             ->add('num_journee')
-            ->add('gymnase')
-        ;
+            ->add('gymnase');
     }
 
     public function configureOptions(OptionsResolver $resolver): void

@@ -69,7 +69,7 @@ class MatchesController extends AbstractController
     #[Route('/{id_match}', name: 'app_matches_delete', methods: ['POST'])]
     public function delete(Request $request, Matches $match, MatchesRepository $matchesRepository): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$match->getId_match(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $match->getId_match(), $request->request->get('_token'))) {
             $matchesRepository->remove($match, true);
         }
 

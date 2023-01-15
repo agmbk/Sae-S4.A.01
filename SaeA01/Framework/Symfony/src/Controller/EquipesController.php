@@ -69,7 +69,7 @@ class EquipesController extends AbstractController
     #[Route('/{libelle}', name: 'app_equipes_delete', methods: ['POST'])]
     public function delete(Request $request, Equipes $equipe, EquipesRepository $equipesRepository): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$equipe->getLibelle(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $equipe->getLibelle(), $request->request->get('_token'))) {
             $equipesRepository->remove($equipe, true);
         }
 
