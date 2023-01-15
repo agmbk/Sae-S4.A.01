@@ -571,10 +571,10 @@ class ClassLoader
          *
          * Prevents access to $this/self from included files.
          *
-         * @param string $file
+         * @param  string $file
          * @return void
          */
-        self::$includeFile = static function ($file) {
+        self::$includeFile = static function($file) {
             include $file;
         };
     }

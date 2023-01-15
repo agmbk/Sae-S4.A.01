@@ -21,13 +21,13 @@ final class Version20221204225512 extends AbstractMigration
     public function up(Schema $schema): void
     {
 
-        $this->addSql('ALTER TABLE s3sae.utilisateur ALTER mot_de_passe TYPE VARCHAR(255)');
+        $this->addSql('ALTER TABLE SaeA01.utilisateur ALTER mot_de_passe TYPE VARCHAR(255)');
     }
 
 
     public function down(Schema $schema): void
     {
 
-        $this->addSql('ALTER TABLE s3sae.utilisateur ALTER mot_de_passe TYPE VARCHAR(50)');
+        $this->addSql('ALTER TABLE SaeA01.utilisateur ALTER mot_de_passe TYPE VARCHAR(50)');
     }
 }

@@ -10,7 +10,7 @@ use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UtilisateurRepository::class)]
-#[ORM\Table(name: 's3sae.utilisateur')]
+#[ORM\Table(name: 'SaeA01.utilisateur')]
 #[UniqueEntity(fields: ['idUtilisateur'], message: 'There is already an account with this idUtilisateur')]
 class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
 {
