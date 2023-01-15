@@ -63,7 +63,7 @@ class FormDataExtractor implements FormDataExtractorInterface
         ];
 
         if ($form->getData() !== $form->getNormData()) {
-            $data['default_data']['model'] = $form->getData();
+            $data['default_data']['models'] = $form->getData();
         }
 
         if ($form->getViewData() !== $form->getNormData()) {
@@ -90,7 +90,7 @@ class FormDataExtractor implements FormDataExtractorInterface
         }
 
         if ($form->getData() !== $form->getNormData()) {
-            $data['submitted_data']['model'] = $form->getData();
+            $data['submitted_data']['models'] = $form->getData();
         }
 
         foreach ($form->getErrors() as $error) {

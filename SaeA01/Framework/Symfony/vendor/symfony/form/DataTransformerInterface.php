@@ -26,7 +26,7 @@ interface DataTransformerInterface
      * This method is called when the form field is initialized with its default data, on
      * two occasions for two types of transformers:
      *
-     * 1. Model transformers which normalize the model data.
+     * 1. Model transformers which normalize the models data.
      *    This is mainly useful when the same form type (the same configuration)
      *    has to handle different kind of underlying data, e.g The DateType can
      *    deal with strings or \DateTime objects as input.
@@ -38,11 +38,11 @@ interface DataTransformerInterface
      *
      *    b/ When the form is compound the returned value should be an array or
      *       an object to be mapped to the children. Each property of the compound
-     *       data will be used as model data by each child and will be transformed
+     *       data will be used as models data by each child and will be transformed
      *       too. In this case data class should be the class of the object, or null
      *       when it is an array.
      *
-     * All transformers are called in a configured order from model data to view value.
+     * All transformers are called in a configured order from models data to view value.
      * At the end of this chain the view data will be validated against the data class
      * setting.
      *

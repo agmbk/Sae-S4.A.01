@@ -550,7 +550,7 @@
                         <th class="font-normal" scope="row">Model Format</th>
                         <td>
                             {% if data.default_data.model is defined %}
-                                {{ profiler_dump(data.default_data.seek('model')) }}
+                                {{ profiler_dump(data.default_data.seek('models')) }}
                             {% else %}
                                 <em class="font-normal text-muted">same as normalized format</em>
                             {% endif %}
@@ -610,7 +610,7 @@
                         <th class="font-normal" scope="row">Model Format</th>
                         <td>
                             {% if data.submitted_data.model is defined %}
-                                {{ profiler_dump(data.submitted_data.seek('model')) }}
+                                {{ profiler_dump(data.submitted_data.seek('models')) }}
                             {% else %}
                                 <em class="font-normal text-muted">same as normalized format</em>
                             {% endif %}

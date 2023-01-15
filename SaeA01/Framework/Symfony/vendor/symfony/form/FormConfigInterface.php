@@ -76,7 +76,7 @@ interface FormConfigInterface
     public function getViewTransformers(): array;
 
     /**
-     * Returns the model transformers of the form.
+     * Returns the models transformers of the form.
      *
      * @return DataTransformerInterface[]
      */
@@ -190,7 +190,7 @@ interface FormConfigInterface
     public function getOption(string $name, mixed $default = null): mixed;
 
     /**
-     * Returns a callable that takes the model data as argument and that returns if it is empty or not.
+     * Returns a callable that takes the models data as argument and that returns if it is empty or not.
      */
     public function getIsEmptyCallback(): ?callable;
 }

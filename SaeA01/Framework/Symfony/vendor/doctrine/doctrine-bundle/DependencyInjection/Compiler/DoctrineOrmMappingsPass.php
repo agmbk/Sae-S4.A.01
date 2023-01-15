@@ -14,7 +14,7 @@ use Symfony\Component\DependencyInjection\Definition;
 use Symfony\Component\DependencyInjection\Reference;
 
 /**
- * Class for Symfony bundles to configure mappings for model classes not in the
+ * Class for Symfony bundles to configure mappings for models classes not in the
  * auto-mapped folder.
  *
  * NOTE: alias is only supported by Symfony 2.6+ and will be ignored with older versions.

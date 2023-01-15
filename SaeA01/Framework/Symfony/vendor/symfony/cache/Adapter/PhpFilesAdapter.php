@@ -39,7 +39,7 @@ class PhpFilesAdapter extends AbstractAdapter implements PruneableInterface
 
     /**
      * @param $appendOnly Set to `true` to gain extra performance when the items stored in this pool never expire.
-     *                    Doing so is encouraged because it fits perfectly OPcache's memory model.
+     *                    Doing so is encouraged because it fits perfectly OPcache's memory models.
      *
      * @throws CacheException if OPcache is not enabled
      */

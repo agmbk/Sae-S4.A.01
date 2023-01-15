@@ -1422,15 +1422,15 @@ class ClassMetadataInfo implements ClassMetadata
     /**
      * Gets the mapping of an association.
      *
-     * @see ClassMetadataInfo::$associationMappings
-     *
      * @param string $fieldName The field name that represents the association in
-     *                          the object model.
+     *                          the object models.
      *
      * @return mixed[] The mapping.
      * @psalm-return AssociationMapping
      *
      * @throws MappingException
+     * @see ClassMetadataInfo::$associationMappings
+     *
      */
     public function getAssociationMapping($fieldName)
     {

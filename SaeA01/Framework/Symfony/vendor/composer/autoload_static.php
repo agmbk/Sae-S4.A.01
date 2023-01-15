@@ -4,9 +4,9 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitd12f9a90c765c2ce09d0166d1a232d35
+class ComposerStaticInit1afc7747337e651b6fbb1657b977a8a1
 {
-    public static $files = array (
+    public static $files = array(
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
@@ -553,33 +553,41 @@ class ComposerStaticInitd12f9a90c765c2ce09d0166d1a232d35
         array (
             0 => __DIR__ . '/..' . '/doctrine/doctrine-migrations-bundle',
         ),
-        'Doctrine\\Bundle\\DoctrineBundle\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/doctrine/doctrine-bundle',
-        ),
-        'DeepCopy\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
-        ),
-        'App\\Tests\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/tests',
-        ),
-        'App\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/src',
-        ),
+        'Doctrine\\Bundle\\DoctrineBundle\\' =>
+            array(
+                0 => __DIR__ . '/..' . '/doctrine/doctrine-bundle',
+            ),
+        'DeepCopy\\' =>
+            array(
+                0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
+            ),
+        'App\\Tests\\' =>
+            array(
+                0 => __DIR__ . '/../..' . '/tests',
+            ),
+        'App\\' =>
+            array(
+                0 => __DIR__ . '/../..' . '/src',
+            ),
     );
 
-    public static $classMap = array (
+    public static $classMap = array(
+        'App\\Controller\\EquipesController' => __DIR__ . '/../..' . '/src/Controller/EquipesController.php',
         'App\\Controller\\HomeController' => __DIR__ . '/../..' . '/src/Controller/HomeController.php',
         'App\\Controller\\LoginController' => __DIR__ . '/../..' . '/src/Controller/LoginController.php',
+        'App\\Controller\\MatchesController' => __DIR__ . '/../..' . '/src/Controller/MatchesController.php',
         'App\\Controller\\RegistrationController' => __DIR__ . '/../..' . '/src/Controller/RegistrationController.php',
         'App\\Entity\\Article' => __DIR__ . '/../..' . '/src/Entity/Article.php',
+        'App\\Entity\\Equipes' => __DIR__ . '/../..' . '/src/Entity/Equipes.php',
+        'App\\Entity\\Matches' => __DIR__ . '/../..' . '/src/Entity/Matches.php',
         'App\\Entity\\Utilisateur' => __DIR__ . '/../..' . '/src/Entity/Utilisateur.php',
+        'App\\Form\\EquipesType' => __DIR__ . '/../..' . '/src/Form/EquipesType.php',
+        'App\\Form\\MatchesType' => __DIR__ . '/../..' . '/src/Form/MatchesType.php',
         'App\\Form\\RegistrationFormType' => __DIR__ . '/../..' . '/src/Form/RegistrationFormType.php',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
         'App\\Repository\\ArticleRepository' => __DIR__ . '/../..' . '/src/Repository/ArticleRepository.php',
+        'App\\Repository\\EquipesRepository' => __DIR__ . '/../..' . '/src/Repository/EquipesRepository.php',
+        'App\\Repository\\MatchesRepository' => __DIR__ . '/../..' . '/src/Repository/MatchesRepository.php',
         'App\\Repository\\UtilisateurRepository' => __DIR__ . '/../..' . '/src/Repository/UtilisateurRepository.php',
         'Collator' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
@@ -6384,15 +6392,15 @@ class ComposerStaticInitd12f9a90c765c2ce09d0166d1a232d35
         'phpDocumentor\\Reflection\\Types\\This' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/This.php',
         'phpDocumentor\\Reflection\\Types\\Void_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Void_.php',
         'phpDocumentor\\Reflection\\Utils' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/Utils.php',
-        '©' => __DIR__ . '/..' . '/symfony/cache/Traits/ValueWrapper.php',
+        'ï¿½' => __DIR__ . '/..' . '/symfony/cache/Traits/ValueWrapper.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitd12f9a90c765c2ce09d0166d1a232d35::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitd12f9a90c765c2ce09d0166d1a232d35::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitd12f9a90c765c2ce09d0166d1a232d35::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit1afc7747337e651b6fbb1657b977a8a1::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit1afc7747337e651b6fbb1657b977a8a1::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit1afc7747337e651b6fbb1657b977a8a1::$classMap;
 
         }, null, ClassLoader::class);
     }

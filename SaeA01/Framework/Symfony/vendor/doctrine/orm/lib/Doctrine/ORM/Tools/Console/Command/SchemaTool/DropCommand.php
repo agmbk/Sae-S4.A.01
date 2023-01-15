@@ -33,7 +33,7 @@ class DropCommand extends AbstractCommand
              ->addOption('full-database', null, InputOption::VALUE_NONE, 'Instead of using the Class Metadata to detect the database table schema, drop ALL assets that the database contains.')
              ->setHelp(<<<'EOT'
 Processes the schema and either drop the database schema of EntityManager Storage Connection or generate the SQL output.
-Beware that the complete database is dropped by this command, even tables that are not relevant to your metadata model.
+Beware that the complete database is dropped by this command, even tables that are not relevant to your metadata models.
 
 <comment>Hint:</comment> If you have a database with tables that should not be managed
 by the ORM, you can use a DBAL functionality to filter the tables and sequences down

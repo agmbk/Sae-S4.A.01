@@ -36,10 +36,10 @@ use Symfony\Component\PropertyAccess\PropertyPathInterface;
  * of the data flow within a form. A form stores its data in three different
  * representations:
  *
- *   (1) the "model" format required by the form's object
+ *   (1) the "models" format required by the form's object
  *   (2) the "normalized" format for internal processing
  *   (3) the "view" format used for display simple fields
- *       or map children model data for compound fields
+ *       or map children models data for compound fields
  *
  * A date field, for example, may store a date as "Y-m-d" string (1) in the
  * object. To facilitate processing in the field, this value is normalized
@@ -57,7 +57,7 @@ use Symfony\Component\PropertyAccess\PropertyPathInterface;
  * demonstrate this, let's extend our above date field to store the value
  * either as "Y-m-d" string or as timestamp. Internally we still want to
  * use a DateTime object for processing. To convert the data from string/integer
- * to DateTime you can set a model transformer by calling
+ * to DateTime you can set a models transformer by calling
  * addModelTransformer(). The normalized data is then converted to the displayed
  * data as described before.
  *
@@ -112,7 +112,7 @@ class Form implements \IteratorAggregate, FormInterface, ClearableErrorsInterfac
      *
      * When the data is initialized with its default value, that default value
      * is passed through the transformer chain in order to synchronize the
-     * model, normalized and view format for the first time. This is done
+     * models, normalized and view format for the first time. This is done
      * lazily in order to save performance when {@link setData()} is called
      * manually, making the initialization with the configured default value
      * superfluous.
@@ -309,7 +309,7 @@ class Form implements \IteratorAggregate, FormInterface, ClearableErrorsInterfac
         $this->lockSetData = true;
         $dispatcher = $this->config->getEventDispatcher();
 
-        // Hook to change content of the model data before transformation and mapping children
+        // Hook to change content of the models data before transformation and mapping children
         if ($dispatcher->hasListeners(FormEvents::PRE_SET_DATA)) {
             $event = new PreSetDataEvent($this, $modelData);
             $dispatcher->dispatch($event, FormEvents::PRE_SET_DATA);
@@ -1029,7 +1029,7 @@ class Form implements \IteratorAggregate, FormInterface, ClearableErrorsInterfac
     }
 
     /**
-     * Normalizes the underlying data if a model transformer is set.
+     * Normalizes the underlying data if a models transformer is set.
      *
      * @throws TransformationFailedException If the underlying data cannot be transformed to "normalized" format
      */
@@ -1047,9 +1047,9 @@ class Form implements \IteratorAggregate, FormInterface, ClearableErrorsInterfac
     }
 
     /**
-     * Reverse transforms a value if a model transformer is set.
+     * Reverse transforms a value if a models transformer is set.
      *
-     * @throws TransformationFailedException If the value cannot be transformed to "model" format
+     * @throws TransformationFailedException If the value cannot be transformed to "models" format
      */
     private function normToModel(mixed $value): mixed
     {

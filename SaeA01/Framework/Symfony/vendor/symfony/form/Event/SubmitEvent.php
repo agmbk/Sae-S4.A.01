@@ -15,7 +15,7 @@ use Symfony\Component\Form\FormEvent;
 
 /**
  * This event is dispatched just before the Form::submit() method
- * transforms back the normalized data to the model and view data.
+ * transforms back the normalized data to the models and view data.
  *
  * It can be used to change data from the normalized representation of the data.
  */

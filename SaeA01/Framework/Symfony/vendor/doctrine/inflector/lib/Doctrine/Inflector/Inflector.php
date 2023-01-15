@@ -312,7 +312,7 @@ class Inflector
             } elseif ((ord($string[$i]) & 0xFE) === 0xFC) {
                 $n = 5; // 1111110b
             } else {
-                return false; // Does not match any model
+                return false; // Does not match any models
             }
 
             for ($j = 0; $j < $n; $j++) { // n bytes matching 10bbbbbb follow ?

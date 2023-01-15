@@ -15,7 +15,7 @@ use Symfony\Component\Form\FormEvent;
 
 /**
  * This event is dispatched after the Form::submit()
- * once the model and view data have been denormalized.
+ * once the models and view data have been denormalized.
  *
  * It can be used to fetch data after denormalization.
  */

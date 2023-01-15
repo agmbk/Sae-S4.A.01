@@ -27,7 +27,7 @@ class CheckboxType extends AbstractType
     {
         // Unlike in other types, where the data is NULL by default, it
         // needs to be a Boolean here. setData(null) is not acceptable
-        // for checkboxes and radio buttons (unless a custom model
+        // for checkboxes and radio buttons (unless a custom models
         // transformer handles this case).
         // We cannot solve this case via overriding the "data" option, because
         // doing so also calls setDataLocked(true).

@@ -46,7 +46,7 @@ final class FormEvents
      * to normalized representation.
      *
      * It's also dispatched just before the Form::submit() method transforms back
-     * the normalized data to the model and view data.
+     * the normalized data to the models and view data.
      *
      * So at this stage children of compound forms are submitted and synchronized, unless
      * their transformation failed, but a parent would still be at the PRE_SUBMIT level.
@@ -61,7 +61,7 @@ final class FormEvents
     /**
      * The FormEvents::POST_SUBMIT event is dispatched at the very end of the Form::submit().
      *
-     * It this stage the model and view data may have been denormalized. Otherwise the form
+     * It this stage the models and view data may have been denormalized. Otherwise the form
      * is desynchronized because transformation failed during submission.
      *
      * It can be used to fetch data after denormalization.
@@ -88,7 +88,7 @@ final class FormEvents
      * The FormEvents::POST_SET_DATA event is dispatched at the end of the Form::setData() method.
      *
      * This event can be used to modify the form depending on the final state of the underlying data
-     * accessible in every representation: model, normalized and view.
+     * accessible in every representation: models, normalized and view.
      *
      * @Event("Symfony\Component\Form\Event\PostSetDataEvent")
      */

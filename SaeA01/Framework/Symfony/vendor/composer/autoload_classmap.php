@@ -6,14 +6,22 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Controller\\EquipesController' => $baseDir . '/src/Controller/EquipesController.php',
     'App\\Controller\\HomeController' => $baseDir . '/src/Controller/HomeController.php',
     'App\\Controller\\LoginController' => $baseDir . '/src/Controller/LoginController.php',
+    'App\\Controller\\MatchesController' => $baseDir . '/src/Controller/MatchesController.php',
     'App\\Controller\\RegistrationController' => $baseDir . '/src/Controller/RegistrationController.php',
     'App\\Entity\\Article' => $baseDir . '/src/Entity/Article.php',
+    'App\\Entity\\Equipes' => $baseDir . '/src/Entity/Equipes.php',
+    'App\\Entity\\Matches' => $baseDir . '/src/Entity/Matches.php',
     'App\\Entity\\Utilisateur' => $baseDir . '/src/Entity/Utilisateur.php',
+    'App\\Form\\EquipesType' => $baseDir . '/src/Form/EquipesType.php',
+    'App\\Form\\MatchesType' => $baseDir . '/src/Form/MatchesType.php',
     'App\\Form\\RegistrationFormType' => $baseDir . '/src/Form/RegistrationFormType.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
     'App\\Repository\\ArticleRepository' => $baseDir . '/src/Repository/ArticleRepository.php',
+    'App\\Repository\\EquipesRepository' => $baseDir . '/src/Repository/EquipesRepository.php',
+    'App\\Repository\\MatchesRepository' => $baseDir . '/src/Repository/MatchesRepository.php',
     'App\\Repository\\UtilisateurRepository' => $baseDir . '/src/Repository/UtilisateurRepository.php',
     'Collator' => $vendorDir . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',

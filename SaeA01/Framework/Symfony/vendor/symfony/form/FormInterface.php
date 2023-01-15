@@ -94,7 +94,7 @@ interface FormInterface extends \ArrayAccess, \Traversable, \Countable
     public function getErrors(bool $deep = false, bool $flatten = true): FormErrorIterator;
 
     /**
-     * Updates the form with default model data.
+     * Updates the form with default models data.
      *
      * @param mixed $modelData The data formatted as expected for the underlying object
      *
@@ -110,7 +110,7 @@ interface FormInterface extends \ArrayAccess, \Traversable, \Countable
     public function setData(mixed $modelData): static;
 
     /**
-     * Returns the model data in the format needed for the underlying object.
+     * Returns the models data in the format needed for the underlying object.
      *
      * @return mixed When the field is not submitted, the default data is returned.
      *               When the field is submitted, the default data has been bound
@@ -122,7 +122,7 @@ interface FormInterface extends \ArrayAccess, \Traversable, \Countable
 
     /**
      * Returns the normalized data of the field, used as internal bridge
-     * between model data and view data.
+     * between models data and view data.
      *
      * @return mixed When the field is not submitted, the default data is returned.
      *               When the field is submitted, the normalized submitted data
@@ -141,7 +141,7 @@ interface FormInterface extends \ArrayAccess, \Traversable, \Countable
      * There are two cases:
      *
      * - When the form is compound the view data is mapped to the children.
-     *   Each child will use its mapped data as model data.
+     *   Each child will use its mapped data as models data.
      *   It can be an array, an object or null.
      *
      * - When the form is simple its view data is used to be bound
