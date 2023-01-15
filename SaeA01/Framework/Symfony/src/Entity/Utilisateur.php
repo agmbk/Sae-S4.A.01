@@ -11,105 +11,24 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UtilisateurRepository::class)]
 #[ORM\Table(name: 'SaeA01.utilisateur')]
-#[UniqueEntity(fields: ['idUtilisateur'], message: 'There is already an account with this idUtilisateur')]
+#[UniqueEntity(fields: ['id'], message: 'There is already an account with this id')]
 class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
     #[ORM\Column(length: 50)]
-    private ?string $idUtilisateur = null;
-
-    #[ORM\Column(length: 50)]
-    private ?string $nom = null;
-
-    #[ORM\Column(length: 50)]
-    private ?string $prenom = null;
-
-    #[ORM\Column(length: 50)]
-    private ?string $adresse = null;
-
-    #[ORM\Column(length: 10)]
-    private ?string $tel = null;
-
-    #[ORM\Column(length: 50)]
-    private ?string $mail = null;
+    private ?string $id = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $motDePasse = null;
+    private ?string $password = null;
 
     #[ORM\Column(length: 50)]
-    private ?string $role = null;
+    private ?string $roles = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $dateCreation = null;
-
-    public function getNom(): ?string
+    public function setRoles(string $roles): self
     {
-        return $this->nom;
-    }
-
-    public function setNom(string $nom): self
-    {
-        $this->nom = $nom;
-
-        return $this;
-    }
-
-    public function getPrenom(): ?string
-    {
-        return $this->prenom;
-    }
-
-    public function setPrenom(string $prenom): self
-    {
-        $this->prenom = $prenom;
-
-        return $this;
-    }
-
-    public function getAdresse(): ?string
-    {
-        return $this->adresse;
-    }
-
-    public function setAdresse(string $adresse): self
-    {
-        $this->adresse = $adresse;
-
-        return $this;
-    }
-
-    public function getTel(): ?string
-    {
-        return $this->tel;
-    }
-
-    public function setTel(string $tel): self
-    {
-        $this->tel = $tel;
-
-        return $this;
-    }
-
-    public function getMail(): ?string
-    {
-        return $this->mail;
-    }
-
-    public function setMail(string $mail): self
-    {
-        $this->mail = $mail;
-
-        return $this;
-    }
-
-    public function getRole(): ?string
-    {
-        return $this->role;
-    }
-
-    public function setRole(string $role): self
-    {
-        $this->role = $role;
+        $this->roles = $roles;
 
         return $this;
     }
@@ -128,7 +47,7 @@ class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function getRoles(): array
     {
-        return [strtoupper('ROLE_'.$this->role)];
+        return [strtoupper('ROLE_'.$this->roles)];
     }
 
     public function eraseCredentials()
@@ -138,30 +57,30 @@ class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
 
     public function getUserIdentifier(): string
     {
-        return $this->idUtilisateur;
+        return $this->id;
     }
 
-    public function getIdUtilisateur(): ?string
+    public function getId(): ?string
     {
-        return $this->idUtilisateur;
+        return $this->id;
     }
 
-    public function setIdUtilisateur(?string $idUtilisateur): self
+    public function setId(?string $id): self
     {
-        $this->idUtilisateur = $idUtilisateur;
+        $this->id = $id;
 
         return $this;
     }
 
     public function setPassword(?string $motDePasse): self
     {
-        $this->motDePasse = $motDePasse;
+        $this->password = $motDePasse;
 
         return $this;
     }
 
     public function getPassword(): ?string
     {
-        return $this->motDePasse;
+        return $this->password;
     }
 }

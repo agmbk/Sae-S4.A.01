@@ -25,7 +25,7 @@ class RegistrationController extends AbstractController
             // encode the plain password
             $user
                 ->setDateCreation(new \DateTime())
-                ->setRole("client")
+                ->setRoles("client")
                 ->setPassword(
                     $userPasswordHasher->hashPassword(
                         $user,
