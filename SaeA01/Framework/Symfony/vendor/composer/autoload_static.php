@@ -573,22 +573,21 @@ class ComposerStaticInit1afc7747337e651b6fbb1657b977a8a1
 
     public static $classMap = array (
         'App\\Controller\\EquipesController' => __DIR__ . '/../..' . '/src/Controller/EquipesController.php',
-        'App\\Controller\\HomeController' => __DIR__ . '/../..' . '/src/Controller/HomeController.php',
-        'App\\Controller\\LoginController' => __DIR__ . '/../..' . '/src/Controller/LoginController.php',
         'App\\Controller\\MatchesController' => __DIR__ . '/../..' . '/src/Controller/MatchesController.php',
-        'App\\Controller\\RegistrationController' => __DIR__ . '/../..' . '/src/Controller/RegistrationController.php',
+        'App\\Controller\\SecurityController' => __DIR__ . '/../..' . '/src/Controller/SecurityController.php',
         'App\\Entity\\Article' => __DIR__ . '/../..' . '/src/Entity/Article.php',
         'App\\Entity\\Equipes' => __DIR__ . '/../..' . '/src/Entity/Equipes.php',
         'App\\Entity\\Matches' => __DIR__ . '/../..' . '/src/Entity/Matches.php',
-        'App\\Entity\\Utilisateur' => __DIR__ . '/../..' . '/src/Entity/Utilisateur.php',
+        'App\\Entity\\User' => __DIR__ . '/../..' . '/src/Entity/User.php',
         'App\\Form\\EquipesType' => __DIR__ . '/../..' . '/src/Form/EquipesType.php',
         'App\\Form\\MatchesType' => __DIR__ . '/../..' . '/src/Form/MatchesType.php',
-        'App\\Form\\RegistrationFormType' => __DIR__ . '/../..',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
         'App\\Repository\\ArticleRepository' => __DIR__ . '/../..' . '/src/Repository/ArticleRepository.php',
         'App\\Repository\\EquipesRepository' => __DIR__ . '/../..' . '/src/Repository/EquipesRepository.php',
         'App\\Repository\\MatchesRepository' => __DIR__ . '/../..' . '/src/Repository/MatchesRepository.php',
+        'App\\Repository\\UserRepository' => __DIR__ . '/../..' . '/src/Repository/UserRepository.php',
         'App\\Repository\\UtilisateurRepository' => __DIR__ . '/../..' . '/src/Repository/UtilisateurRepository.php',
+        'App\\Security\\AppCustomAuthenticator' => __DIR__ . '/../..' . '/src/Security/AppCustomAuthenticator.php',
         'Collator' => __DIR__ . '/..' . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
@@ -6392,7 +6391,7 @@ class ComposerStaticInit1afc7747337e651b6fbb1657b977a8a1
         'phpDocumentor\\Reflection\\Types\\This' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/This.php',
         'phpDocumentor\\Reflection\\Types\\Void_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Void_.php',
         'phpDocumentor\\Reflection\\Utils' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/Utils.php',
-        'ï¿½' => __DIR__ . '/..' . '/symfony/cache/Traits/ValueWrapper.php',
+        '©' => __DIR__ . '/..' . '/symfony/cache/Traits/ValueWrapper.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
