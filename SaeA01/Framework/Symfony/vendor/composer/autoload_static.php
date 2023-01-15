@@ -583,7 +583,7 @@ class ComposerStaticInit1afc7747337e651b6fbb1657b977a8a1
         'App\\Entity\\Utilisateur' => __DIR__ . '/../..' . '/src/Entity/Utilisateur.php',
         'App\\Form\\EquipesType' => __DIR__ . '/../..' . '/src/Form/EquipesType.php',
         'App\\Form\\MatchesType' => __DIR__ . '/../..' . '/src/Form/MatchesType.php',
-        'App\\Form\\RegistrationFormType' => __DIR__ . '/../..' . '/src/Form/RegistrationFormType.php',
+        'App\\Form\\RegistrationFormType' => __DIR__ . '/../..',
         'App\\Kernel' => __DIR__ . '/../..' . '/src/Kernel.php',
         'App\\Repository\\ArticleRepository' => __DIR__ . '/../..' . '/src/Repository/ArticleRepository.php',
         'App\\Repository\\EquipesRepository' => __DIR__ . '/../..' . '/src/Repository/EquipesRepository.php',
@@ -6392,7 +6392,7 @@ class ComposerStaticInit1afc7747337e651b6fbb1657b977a8a1
         'phpDocumentor\\Reflection\\Types\\This' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/This.php',
         'phpDocumentor\\Reflection\\Types\\Void_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Void_.php',
         'phpDocumentor\\Reflection\\Utils' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/Utils.php',
-        '©' => __DIR__ . '/..' . '/symfony/cache/Traits/ValueWrapper.php',
+        'ï¿½' => __DIR__ . '/..' . '/symfony/cache/Traits/ValueWrapper.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
