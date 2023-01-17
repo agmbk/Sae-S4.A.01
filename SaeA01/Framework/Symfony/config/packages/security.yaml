@@ -17,21 +17,28 @@ security:
         main:
             lazy: true
             provider: app_user_provider
-            custom_authenticator: App\Security\AppCustomAuthenticator
+
+            form_login:
+                # "app_login" is the name of the route created previously
+                login_path: app_login
+                check_path: app_login
+
+            logout:
+                path: app_logout
+                target: app_login
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall
 
             # https://symfony.com/doc/current/security/impersonating_user.html
             # switch_user: true
-            logout:
-                path: app_logout
+
 
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
         # - { path: ^/admin, roles: ROLE_ADMIN }
-        - { path: ^/lucky, roles: ROLE_CLIENT }
+        # - { path: ^/lucky, roles: ROLE_CLIENT }
         # - { path: ^/admin, roles: ROLE_ADMIN }
         # - { path: ^/operateur, roles: ROLE_OPERATEUR }
         # - { path: ^/chef_atelier, roles: ROLE_CHEF_ATELIER }

@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Controller\\EquipesController' => $baseDir . '/src/Controller/EquipesController.php',
+    'App\\Controller\\Home' => $baseDir . '/src/Controller/Home.php',
     'App\\Controller\\MatchesController' => $baseDir . '/src/Controller/MatchesController.php',
     'App\\Controller\\SecurityController' => $baseDir . '/src/Controller/SecurityController.php',
     'App\\Entity\\Article' => $baseDir . '/src/Entity/Article.php',
@@ -14,13 +15,14 @@ return array(
     'App\\Entity\\Matches' => $baseDir . '/src/Entity/Matches.php',
     'App\\Entity\\User' => $baseDir . '/src/Entity/User.php',
     'App\\Form\\EquipesType' => $baseDir . '/src/Form/EquipesType.php',
+    'App\\Form\\LoginFormType' => $baseDir . '/src/Form/LoginFormType.php',
     'App\\Form\\MatchesType' => $baseDir . '/src/Form/MatchesType.php',
+    'App\\Form\\RegistrationFormType' => $baseDir . '/src/Form/RegistrationFormType.php',
     'App\\Kernel' => $baseDir . '/src/Kernel.php',
     'App\\Repository\\ArticleRepository' => $baseDir . '/src/Repository/ArticleRepository.php',
     'App\\Repository\\EquipesRepository' => $baseDir . '/src/Repository/EquipesRepository.php',
     'App\\Repository\\MatchesRepository' => $baseDir . '/src/Repository/MatchesRepository.php',
     'App\\Repository\\UserRepository' => $baseDir . '/src/Repository/UserRepository.php',
-    'App\\Repository\\UtilisateurRepository' => $baseDir . '/src/Repository/UtilisateurRepository.php',
     'App\\Security\\AppCustomAuthenticator' => $baseDir . '/src/Security/AppCustomAuthenticator.php',
     'Collator' => $vendorDir . '/symfony/polyfill-intl-icu/Resources/stubs/Collator.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',

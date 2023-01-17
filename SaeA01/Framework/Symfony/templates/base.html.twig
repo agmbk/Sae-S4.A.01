@@ -20,7 +20,7 @@
 {% if app.user %}
     {% block logout %} {{ include('_logout.html.twig') }} {% endblock %}
 {% else %}
-    {% block login %} {{ include('_login.html.twig') }} {% endblock %}
+    {% block login %} {% endblock %}
 {% endif %}
 {% block body %}{% endblock %}
 </body>
