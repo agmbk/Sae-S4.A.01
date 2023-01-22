@@ -1,13 +1,19 @@
 import {Injectable} from '@nestjs/common';
-import {InjectRepository} from "@nestjs/typeorm";
-import {Team} from "./models/team.model";
+import {Repository} from "typeorm";
+import {TeamModel} from "./models/team.model";
 
 @Injectable()
 export class TeamService {
     constructor(
-        @InjectRepository(Team),
+        private teamRepository: Repository<TeamModel>
     ) {
+    }
 
+    async findAll(): Promise<TeamModel[]> {
+        return this.teamRepository.find();
+    }
 
+    async findOne(libelle: string): Promise<TeamModel> {
+        return this.teamRepository.findOneBy({libelle});
     }
 }
