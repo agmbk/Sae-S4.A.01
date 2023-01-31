@@ -16,7 +16,7 @@ class MatchesController extends AbstractController
     #[Route('/', name: 'app_matches_index', methods: ['GET'])]
     public function index(MatchesRepository $matchesRepository): Response
     {
-        return $this->render('matches/index.html.twig', [
+        return $this->render('matches/login.html.twig', [
             'matches' => $matchesRepository->findAll(),
         ]);
     }
