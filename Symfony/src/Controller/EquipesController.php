@@ -16,7 +16,7 @@ class EquipesController extends AbstractController
     #[Route('/', name: 'app_equipes_index', methods: ['GET'])]
     public function index(EquipesRepository $equipesRepository): Response
     {
-        return $this->render('equipes/login.html.twig', [
+        return $this->render('equipes/index.html.twig', [
             'equipes' => $equipesRepository->findAll(),
         ]);
     }
